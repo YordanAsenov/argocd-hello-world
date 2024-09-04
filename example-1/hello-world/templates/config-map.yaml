@@ -1,7 +1,7 @@
 apiVersion: v1
 data:
   index.html: |
-    Hello world, I'm PLUTO POD (Using a config map)!
+    Hello world, I'm PLUTO POD (Using a config map)! Current env: {{ .Values.env }}
 kind: ConfigMap
 metadata:
   creationTimestamp: null
