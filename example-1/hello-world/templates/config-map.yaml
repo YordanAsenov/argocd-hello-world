@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  index.html: |
+    Hello world, I'm PLUTO POD (Using a config map)!
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: hello-world-cm
