@@ -2,16 +2,16 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata: 
   name: hello-world-app
-  namespace: hello-world
+  namespace: argocd
 spec: 
   destination: 
     namespace: hello-world
     server: "https://kubernetes.default.svc"
   project: default
   source: 
-    path: guestbookexample-1/hello-world
+    path: example-1/hello-world
     repoURL: "https://github.com/YordanAsenov/argocd-hello-world.git"
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
